@@ -1,0 +1,25 @@
+replicaCount: 1
+
+namespace: platform
+
+image:
+  repository: docker.io/library/crypto-api
+  pullPolicy: Never
+  tag: "latest"
+
+podAnnotations: {}
+podLabels: {}
+
+service:
+  type: ClusterIP
+  protocol: TCP
+  port: 1995
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
